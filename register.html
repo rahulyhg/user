@@ -1,0 +1,56 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Register Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+  </head>
+  <script>
+	function func()
+	{
+		var a=document.getElementById("password").value;
+		var b=document.getElementById("c_password").value;
+		if(a==b)
+		{
+			return true;
+		}
+		else
+		{
+			document.getElementById("validation").innerHTML="password is different";
+			return false;
+		}
+	}
+  </script>
+  <body background="images/bg2.jpg"style="background-color:#cccccc; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xl-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xl-4">
+          <section class="register-form">
+             <form method="post" action="insert_data.php" role="register">
+               <h1 class="heading">Square One</h1>
+                 <div class="row">
+                   <div class="col-xs-6 col-md-6">
+                     <input type="text" name="first_name" placeholder="Varun" pattern="[a-z]+" title="Only small case letters" required class="first_name form-control input-lg" autofocus>
+                   </div>
+                   <div class="col-xs-6 col-md-6">
+                       <input type="text" name="last_name" placeholder="Goyal" pattern="[a-z]+" title="Only small case letters" required class="last_name form-control input-lg" autofocus>
+                   </div>
+                 </div>
+                 <input type="text" name="rollno" pattern="[0-9]{10}" placeholder="151099..." title="Only digit with length 10" class="rollno form-control input-lg"required>
+                 <input type="email" name="email" placeholder="Email" class="form-control input-lg email"required/>
+                 <input type="password" class="form-control input-lg" id="password" name="pass" pattern="[A-Za-z0-9]+" title="Strong Password Required(Starting with capital letter then small case letter end with digit" placeholder="Password"required/>
+                 <input type="password" class="form-control input-lg" id="c_password" placeholder="Re-enter password"required/><p id="validation"></p>
+                 <button type="submit" name="go" class="btn btn-lg btn-primary btn-block"  onclick="return func()">Register</button>
+                <!-- <div class="create_account">
+                   <a href="login.html" target="_self">Login</a>
+                 </div>-->
+             </form>
+         </section>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xl-4"></div>
+      </div>
+    </div>
+  </body>
+</html>

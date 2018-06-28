@@ -1,0 +1,31 @@
+.heading {
+  text-align: center;
+}
+.login-form, .register-form{
+  margin-top: 60px;
+  background-color: #F2F2F2;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+.email {
+  margin-bottom: 10px;
+}
+#password,#c_password {
+  margin-bottom: 10px;
+}
+.create_account {
+  margin-top: 10px;
+  text-align: center;
+}
+.first_name {
+  margin-bottom: 10px;
+}
+.last_name {
+  margin-bottom: 10px;
+}
+.email {
+  margin-bottom: 10px;
+}
+.rollno {
+  margin-bottom: 10px;
+}
